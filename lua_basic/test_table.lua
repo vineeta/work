@@ -54,10 +54,70 @@ print( "Table Sorting:" )
 	v = { 2,3,9,4 } 
 function sort_table(v)
 	table.sort(v)
-	return v
+	
+end
+sort_table(v)
+
+local concatenated = table.concat(v, ",")
+print('concatenated: ', concatenated)
+
+--print( table.concat(v,"," ))
+assert('2,3,4,9' == concatenated)
+
+
+function table_equal(a,b)
+  local result = false
+
+  --a = {1,2,3}
+  --b = {'hello'}	
+
+  ca = table.concat(a) 
+  cb = table.concat(b)
+  result =    ca == cb
+  
+
+  ka = {}
+  va = {}
+  for k,v in pairs(a) do
+	table.insert(ka, k)
+	table.insert(va, v)
+  end
+
+  kb = {}
+  vb = {}
+  for k,v in pairs(b) do
+	table.insert(kb, k)
+	table.insert(vb, v)
+  end
+
+  result = table.concat(ka) == table.concat(kb) and
+             table.concat(va) == table.concat(vb)
+
+
+  return result
 end
 
-print( table.concat(v,"," ))
+
+local ta = {name='vineeta'}
+local tb = {name='vineeta'}
+local r = table_equal(ta,tb)
+assert( true == r)
+
+
+
+local ta = {1,2}
+local tb = {1,2}
+local r = table_equal(ta,tb)
+assert( true == r)
+
+local ta = {1,2}
+local tb = {1}
+local r = table_equal(ta,tb)
+assert( false == r)
+
+--print('r: ', r) -- true
+
+
 --print( "table sorting:", sort_table(v))
 
 print("Table Insert:" )
@@ -65,3 +125,14 @@ print("Table Insert:" )
     --print( table.concat(c) )
 	table.insert(c,4,4)
     print( table.concat(c, ","))
+	assert(c)
+
+print("Printing the value in different way:")    
+	a = {p=print}
+	a.p(12)	
+
+print("Remove command:")
+d = { 1, 2, 3 }
+table.remove(d,1)
+print( table.concat(d))
+
