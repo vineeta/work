@@ -68,9 +68,7 @@ assert('2,3,4,9' == concatenated)
 function table_equal(a,b)
   local result = false
 
-  --a = {1,2,3}
-  --b = {'hello'}	
-
+ 
   ca = table.concat(a) 
   cb = table.concat(b)
   result =    ca == cb
@@ -136,3 +134,6 @@ d = { 1, 2, 3 }
 table.remove(d,1)
 print( table.concat(d))
 
+local g = {1,2,3,4}
+local pushed = Table.push(g,5)
+assert({1,2,3,4,5} ==  g)

@@ -20,7 +20,7 @@ function test_lua_table()
 
   local cnt = 0
   for k,v in ipairs(a) do
-    cnt = cnt + 1
+	cnt = cnt + 1
   end
   assert_equal(3, cnt)
 
