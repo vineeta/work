@@ -3,7 +3,7 @@ require 'UnitTest'
 
 function test_sort()
 
-print("Table Sorting:" )
+--print("Table Sorting:" )
     v = { 2,3,9,4 }
 function sort_table(v)
     table.sort(v)
@@ -12,7 +12,7 @@ end
 sort_table(v)
 
 local concatenated = table.concat(v, ",")
-print('concatenated: ', concatenated)
+--print('concatenated: ', concatenated)
 
 --print( table.concat(v,"," ))
 assert_equal('2,3,4,9',  concatenated)
