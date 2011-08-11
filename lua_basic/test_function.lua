@@ -19,3 +19,19 @@ end
  print("\n")
 		 func(3, 4, '-')
 		assert( r == -1 )
+
+function max(a)
+	local mi = 1
+	local m = a[mi]
+		for i,v in pairs(a) do
+			if v > m then
+				mi = i
+				m = v 
+			end
+		end
+	return m, mi
+end
+
+print("The Max of the num is:")
+print(max({1,2,3,7,22,4})) 
+

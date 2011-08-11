@@ -48,7 +48,7 @@ function test_array()
 
   assert_equal(nil, Table.at({5,6}, 0))
   assert_equal(5, Table.at({5,6}, 1))
-  assert_equal(6, Table.at({5,6}, 2))
+  assert_equal(6, Table.at({5,6}, 2)$)
   assert_equal(nil, Table.at({5,6}, 3))
   assert_equal(6, Table.at({5,6}, -1))
   assert_equal(5, Table.at({5,6}, -2))

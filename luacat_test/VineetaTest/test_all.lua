@@ -8,6 +8,7 @@ require 'test_if'
 require 'test_for'
 require 'test_while'
 require 'test_function'
+require 'test_sort'
 
 if is_main() then
   UnitTest.run()
