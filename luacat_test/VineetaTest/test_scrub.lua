@@ -29,15 +29,11 @@ end
 function scrub_arguments(args)
   --
 	local t = {}
- 	--for k,v in pairs(args) do
---		t[k] = "[Function]"
- --   end
-    for k,v in pairs(args) do
+   for k,v in pairs(args) do
         t[k] = "[Function]"
     end
-      	--r = table.concat(t,"=")
- return t
- -- {names = "[Function]", say = "[Function]"}
+   return t
+ 
 end
 
 function test_scrub_two()
