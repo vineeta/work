@@ -1,4 +1,4 @@
-days = { 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' }
+days = { [0] = 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' }
 print( days[4] )
 a = {}
 k = "x"
